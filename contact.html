@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Send us your feedback about Travel Explorer">
+        <link rel="shortcut icon" href="assets/image/favicon.png">
+        <title>Feedback - Travel Explorer</title>
+        <link rel="stylesheet" href="assets/styles.css">
+    </head>
+
+    <body class="body">
+        <header class="navbar" style="background-color:#0a2f4a">
+            <h1><a href="home.html">Travel Explorer</a></h1>
+            <nav>
+                <ul class="nav-bar">
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="itinerary.html">Itinerary</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Feedback</a></li>
+                    <li><a href="map.html">Map</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="header">
+                <h2>Send Us Your Feedback</h2>
+                <p>We'd love to hear from you! Share your travel experiences and suggestions</p>
+            </section>
+
+            <section class="form-container">
+                <form id="feedbackForm" class="feedback-form">
+                    <!-- Personal Information -->
+                    <fieldset class="form-fieldset">
+                        <legend>Personal Information</legend>
+                        
+                        <div class="form-group">
+                            <label for="fullname">Full Name:</label>
+                            <input type="text" id="fullname" name="fullname" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890">
+                        </div>
+                    </fieldset>
+
+                    <!-- Travel Information -->
+                    <fieldset class="form-fieldset">
+                        <legend>Travel Information</legend>
+                        
+                        <div class="form-group">
+                            <label for="destination">Destination Visited:</label>
+                            <select id="destination" name="destination" required>
+                                <option value="">-- Select Destination --</option>
+                                <optgroup label="Europe">
+                                    <option value="Paris">Paris, France</option>
+                                    <option value="Barcelona">Barcelona, Spain</option>
+                                    <option value="Rome">Rome, Italy</option>
+                                </optgroup>
+                                <optgroup label="Asia">
+                                    <option value="Tokyo">Tokyo, Japan</option>
+                                    <option value="Bali">Bali, Indonesia</option>
+                                    <option value="Bangkok">Bangkok, Thailand</option>
+                                </optgroup>
+                                <optgroup label="Middle East">
+                                    <option value="Dubai">Dubai, UAE</option>
+                                </optgroup>
+                                <optgroup label="Americas">
+                                    <option value="NewYork">New York, USA</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="visitdate">Date of Visit:</label>
+                            <input type="date" id="visitdate" name="visitdate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="duration">Trip Duration (days):</label>
+                            <input type="number" id="duration" name="duration" min="1" max="365" value="7" required>
+                        </div>
+                    </fieldset>
+
+                    <!-- Travel Preferences -->
+                    <fieldset class="form-fieldset">
+                        <legend>Travel Type</legend>
+                        
+                        <div class="form-group radio-group">
+                            <input type="radio" id="adventure" name="triptype" value="adventure" required>
+                            <label for="adventure">Adventure</label>
+
+                            <input type="radio" id="relaxation" name="triptype" value="relaxation">
+                            <label for="relaxation">Relaxation</label>
+
+                            <input type="radio" id="cultural" name="triptype" value="cultural">
+                            <label for="cultural">Cultural</label>
+
+                            <input type="radio" id="business" name="triptype" value="business">
+                            <label for="business">Business</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Interests -->
+                    <fieldset class="form-fieldset">
+                        <legend>Interests (Select all that apply)</legend>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="nature" name="interests" value="nature">
+                            <label for="nature">Nature & Outdoors</label>
+
+                            <input type="checkbox" id="culture" name="interests" value="culture">
+                            <label for="culture">Culture & History</label>
+
+                            <input type="checkbox" id="food" name="interests" value="food">
+                            <label for="food">Food & Cuisine</label>
+
+                            <input type="checkbox" id="shopping" name="interests" value="shopping">
+                            <label for="shopping">Shopping</label>
+
+                            <input type="checkbox" id="nightlife" name="interests" value="nightlife">
+                            <label for="nightlife">Nightlife</label>
+
+                            <input type="checkbox" id="photography" name="interests" value="photography">
+                            <label for="photography">Photography</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Feedback Information -->
+                    <fieldset class="form-fieldset">
+                        <legend>Your Feedback</legend>
+                        
+                        <div class="form-group">
+                            <label for="rating">Overall Experience Rating:</label>
+                            <select id="rating" name="rating" required>
+                                <option value="">-- Select Rating --</option>
+                                <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                                <option value="4">⭐⭐⭐⭐ Very Good</option>
+                                <option value="3">⭐⭐⭐ Good</option>
+                                <option value="2">⭐⭐ Fair</option>
+                                <option value="1">⭐ Poor</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="review">Your Review/Feedback:</label>
+                            <textarea id="review" name="review" rows="6" placeholder="Tell us about your experience..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="suggestions">Suggestions for Improvements:</label>
+                            <input type="text" id="suggestions" name="suggestions" 
+                                   list="suggestionsList" placeholder="Type or select from suggestions...">
+                            <datalist id="suggestionsList">
+                                <option value="More destination options">
+                                <option value="Better pricing">
+                                <option value="More detailed guides">
+                                <option value="Better customer support">
+                                <option value="Mobile app">
+                                <option value="More photos/videos">
+                            </datalist>
+                        </div>
+                    </fieldset>
+
+                    <!-- Terms & Submit -->
+                    <fieldset class="form-fieldset">
+                        <legend>Submission</legend>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">I agree to share my feedback publicly on the website</label>
+                        </div>
+
+                        <input type="hidden" name="source" value="website">
+
+                        <div class="form-buttons">
+                            <button type="submit" class="btn-submit">Submit Feedback</button>
+                            <button type="reset" class="btn-reset">Clear Form</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p style="color:white; text-align:center;">Copyright © 2026 Travel Explorer. All rights reserved</p>
+        </footer>
+
+        <script>
+            document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your feedback! We appreciate your input.');
+                this.reset();
+            });
+        </script>
+
+    </body>
+</html>
